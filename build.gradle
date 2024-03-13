@@ -6,13 +6,14 @@ plugins {
 
 group = 'com.demo'
 version = '0.0.1-SNAPSHOT'
+apply plugin: 'maven-publish'
 
 java {
 	sourceCompatibility = '21'
 }
 
 configurations {
-	compileOnly {
+	compilOnly {
 		extendsFrom annotationProcessor
 	}
 }
@@ -34,4 +35,26 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+publishing{
+	publications{
+		common(MavenPublication) {
+			from components.java
+			versionMapping {
+				usage('java-api') {
+					fromResolutionOf('runtimeClasspath')
+				}
+				usage('java-runtime') {
+					fromResolutionResult()
+				}
+			}
+		}
+	}
+	repositories{
+		maven {
+			name = "common"
+			url = layout.buildDirectory.dir("repo")
+		}
+	}
 }

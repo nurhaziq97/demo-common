@@ -1,5 +1,9 @@
 # Common Jar file
-
+---
+![Java-version](https://img.shields.io/badge/Java-v21.03-blue)
+![Gradle-version](https://img.shields.io/badge/Gradle-v8.7-red)
+![SpringBoot-version](https://img.shields.io/badge/Spring_boot-v3.3.0-green)
+---
 ## Overview
 Contains data transfer object (DTOs) that will be used 
 to communicate between one microservice with another microservice.

@@ -18,6 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +32,46 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Gradle files
+.gradle/
+
+# Eclipse
+.metadata/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+*.temp
+
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Logs
+*.log
+
+
+# Project-specific files
+!src/main/resources/
+!src/main/resources/**
+
+# Dependency directories
+node_modules/
+bower_components/
+
+
+# Other files
+.mvn/
